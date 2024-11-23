@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> الفتح للنوافذ والأبواب UPVC</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+header {
+    background-color: #0086c5;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header img.logo {
+            height: 60px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            flex-grow: 1;
+            text-align: center;
+        }
+        nav {
+            background-color: #2e2e2e;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 80px;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #00bfa5;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            position: relative;
+            margin: 0 20px;
+        }
+        nav ul li:hover > ul {
+            display: block;
+        }
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2e2e2e;
+            padding: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+        }
+        nav ul ul li {
+            margin: 0;
+        }
+        nav ul ul a {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            white-space: nowrap;
+        }
+        nav ul ul a:hover {
+            background-color: #00bfa5;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .section {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        .section h2 {
+            color: #1a1a1a;
+            font-size: 2.4rem;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1.2rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .section img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 40px;
+            margin: 20px 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: #444;
+        }
+               footer {
+            background-color: #0086c5;
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        footer .social-icons {
+            margin-top: 15px;
+        }
+        footer .social-icons a {
+            color: #fff;
+            margin: 0 15px;
+            font-size: 1.8rem;
+            transition: color 0.3s;
+        }
+        footer .social-icons a:hover {
+            color: #00bfa5;
+        }
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            font-size: 2.5rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            text-decoration: none;
+            animation: bounce 2s infinite;
+        }
+        .contact-info {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s;
+        }
+        .contact-info:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .contact-info h3 {
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    header img.logo {
+        height: 40px;
+    }
+    header h1 {
+        font-size: 1.8rem;
+        margin: 10px 0;
+    }
+    nav {
+        padding: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+    .section {
+        padding: 20px;
+    }
+    .section h2 {
+        font-size: 1.8rem;
+    }
+    .section p {
+        font-size: 1rem;
+    }
+    .whatsapp-icon {
+        font-size: 1.8rem;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    nav a {
+        font-size: 0.9rem;
+        margin: 5px;
+    }
+    .section h2 {
+        font-size: 1.5rem;
+    }
+    .section p {
+        font-size: 0.9rem;
+    }
+    footer .social-icons a {
+        font-size: 1.2rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img src=Logo/6.png alt="Logo" class="logo"> <!-- مكان للوجو -->
+        <h1 class="animate__animated animate__fadeInDown">الفتح للنوافذ والأبواب UPVC</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li>
+                <a href="#">منتجاتنا <i class="fas fa-chevron-down"></i></a>
+                <ul>
+                    <li><a href="10.html">أبواب وشبابيك الألومنيوم</a></li>
+                    <li><a href="11.html">شبابيك وأبواب UPVC</a></li>
+                    <li><a href="12.html">واجهات زجاجية وقبب</a></li>
+                    <li><a href="13.html">شيش حصيرة شاتر</a></li>
+                    <li><a href="14.html">كابينة شاور وأبواب سيكوريت</a></li>
+                    <li><a href="15.html">هاندريل زجاجي ومعدني</a></li>
+                    <li><a href="16.html">مطابخ </a></li>
+                    <li><a href="17.html">تندات</a></li>
+                    <li><a href="18.html">أبواب وشبابيك هاندريل حديد</a></li>
+                </ul>
+            </li>
+            <li><a href="services.html">الخدمات</a></li>
+            <li><a href="about.html">من نحن</a></li> <!-- هنا الزرار بيشتغل -->
+            <li><a href="our.html">عملاؤنا</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div id="about" class="section animate__animated animate__fadeInUp">
+            <h2>أفضل شركة أبواب حديد وشبابيك في مصر - الفتح</h2>
+            <img src="https://via.placeholder.com/500x300" alt="صورة حول أبواب حديد">
+            <p>
+                تعد شركة الفتح أفضل شركة لأبواب حديد خارجية وداخلية وشبابيك وهاندريل الحديد في مصر 2024.
+            </p>
+            <p>
+                أعمال الكريتال والحديد المشغول هي عملية استخدام الحديد في عمل بوابات حديد خارجية وأبواب حديد داخلية وشبابيك حديد، وتستخدم بشكل رئيسي في عمل أبواب خارجية للعمارات والمنازل، بالإضافة إلى الشبابيك للدور الأرضي، وكذلك بوابات أمنية للأماكن العامة مثل الحدائق، المستشفيات، والمدارس.
+            </p>
+            <h3>ما هو الكريتـــال أو Steeler؟</h3>
+            <p>
+                أعمال الكريتال أو الحديد المشغول (Steel Welding Works) تتضمن استخدام الحرارة والضغط ومادة لحام صلب لربط قطعتين من الحديد.
+            </p>
+            <p>
+                تتطلب هذه العملية تنظيف القطاعات الحديدية من الأوساخ والصدأ، ثم لحامها باستخدام شعلة لحام ومادة لحام صلب. بعد ذلك، يتم تبريد منطقة اللحام وفحصه للتأكد من جودته.
+            </p>
+            <h3>مزايا أعمال لحام حديد الكريتال للأبواب والنوافذ</h3>
+            <ul>
+                <li>القوة والمتانة: الصلب مادة قوية يمكنها تحمل الاستخدام الكثيف والعوامل الجوية.</li>
+                <li>الدقة: يتم تحقيق وصلات دقيقة بين القطع لتوفير الأمان والعزل المناسب.</li>
+                <li>المرونة: يمكن تشكيل الحديد لإنشاء تصاميم متنوعة تناسب جميع الأذواق.</li>
+                <li>سهولة الصيانة: يمكن دهان أو طلاء الحديد لحمايته من التآكل والصدأ.</li>
+                <li>مناسب للمشاريع التجارية والسكنية: توفر التصاميم الحديدية جمالًا وأمانًا في آن واحد.</li>
+            </ul>
+        </div>
+    
+        <div id="products" class="section animate__animated animate__fadeInUp">
+            <h2>أسعار أبواب حديد في مصر</h2>
+            <p>
+                تقدم شركة الفتح مجموعة متنوعة من أبواب الحديد والشبابيك بأسعار تنافسية، مما يجعلها الخيار الأمثل للمنازل والمشاريع التجارية.
+            </p>
+        </div>
+    
+        <div id="services" class="section animate__animated animate__fadeInUp">
+            <h2>خدمات تركيب أبواب حديد وشبابيك حديد</h2>
+            <ul>
+                <li>تركيب أبواب حديد خارجية وداخلية للمنازل والعمارات.</li>
+                <li>تركيب شبابيك حديد للمباني السكنية والتجارية.</li>
+                <li>تركيب بوابات حديد أمنية للأماكن العامة مثل الحدائق والمستشفيات.</li>
+                <li>تركيب درابزين حديد للسلالم والبلكونات.</li>
+            </ul>
+        </div>
+    </div>
+    
+    
+    
+        <div id="contact" class="contact-info animate__animated animate__fadeInUp">
+            <h2>اتصل بنا</h2>
+            <p>
+                لمزيد من المعلومات حول خدماتنا ومنتجاتنا، لا تتردد في التواصل معنا عبر الطرق التالية:
+            </p>
+            <p><strong>الهاتف:</strong> 01140505636 - 01288923256 </p>
+            <p><strong>البريد الإلكتروني:</strong> info@windoorsolutions.net</p>
+            <p><strong>العنوان:</strong> الاسكندرية/خورشيد/طريق المحمودية</p>
+        </div>
+    </div>
+    <a href="https://wa.link/kth31c" class="whatsapp-icon" target="_blank" title="تواصل عبر الواتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <footer class="animate__animated animate__fadeIn">
+        <p>جميع الحقوق محفوظة &copy; 2024 - الفتح</p>
+        <div class="social-icons">
+                      <a href="https://www.facebook.com/ELFATHUPV?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.link/kth31c"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/elfath_upvc"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
+    

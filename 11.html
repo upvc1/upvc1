@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> الفتح للنوافذ والأبواب UPVC</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+header {
+    background-color: #0086c5;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header img.logo {
+            height: 60px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            flex-grow: 1;
+            text-align: center;
+        }
+        nav {
+            background-color: #2e2e2e;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 80px;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #00bfa5;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            position: relative;
+            margin: 0 20px;
+        }
+        nav ul li:hover > ul {
+            display: block;
+        }
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2e2e2e;
+            padding: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+        }
+        nav ul ul li {
+            margin: 0;
+        }
+        nav ul ul a {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            white-space: nowrap;
+        }
+        nav ul ul a:hover {
+            background-color: #00bfa5;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .section {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        .section h2 {
+            color: #1a1a1a;
+            font-size: 2.4rem;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1.2rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .section img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 40px;
+            margin: 20px 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: #444;
+        }
+               footer {
+            background-color: #0086c5;
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        footer .social-icons {
+            margin-top: 15px;
+        }
+        footer .social-icons a {
+            color: #fff;
+            margin: 0 15px;
+            font-size: 1.8rem;
+            transition: color 0.3s;
+        }
+        footer .social-icons a:hover {
+            color: #00bfa5;
+        }
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            font-size: 2.5rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            text-decoration: none;
+            animation: bounce 2s infinite;
+        }
+        .contact-info {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s;
+        }
+        .contact-info:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .contact-info h3 {
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    header img.logo {
+        height: 40px;
+    }
+    header h1 {
+        font-size: 1.8rem;
+        margin: 10px 0;
+    }
+    nav {
+        padding: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+    .section {
+        padding: 20px;
+    }
+    .section h2 {
+        font-size: 1.8rem;
+    }
+    .section p {
+        font-size: 1rem;
+    }
+    .whatsapp-icon {
+        font-size: 1.8rem;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    nav a {
+        font-size: 0.9rem;
+        margin: 5px;
+    }
+    .section h2 {
+        font-size: 1.5rem;
+    }
+    .section p {
+        font-size: 0.9rem;
+    }
+    footer .social-icons a {
+        font-size: 1.2rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img src=Logo/6.png alt="Logo" class="logo"> <!-- مكان للوجو -->
+        <h1 class="animate__animated animate__fadeInDown">الفتح للنوافذ والأبواب UPVC</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li>
+                <a href="#">منتجاتنا <i class="fas fa-chevron-down"></i></a>
+                <ul>
+                    <li><a href="10.html">أبواب وشبابيك الألومنيوم</a></li>
+                    <li><a href="11.html">شبابيك وأبواب UPVC</a></li>
+                    <li><a href="12.html">واجهات زجاجية وقبب</a></li>
+                    <li><a href="13.html">شيش حصيرة شاتر</a></li>
+                    <li><a href="14.html">كابينة شاور وأبواب سيكوريت</a></li>
+                    <li><a href="15.html">هاندريل زجاجي ومعدني</a></li>
+                    <li><a href="16.html">مطابخ </a></li>
+                    <li><a href="17.html">تندات</a></li>
+                    <li><a href="18.html">أبواب وشبابيك هاندريل حديد</a></li>
+                </ul>
+            </li>
+            <li><a href="services.html">الخدمات</a></li>
+            <li><a href="about.html">من نحن</a></li> <!-- هنا الزرار بيشتغل -->
+            <li><a href="our.html">عملاؤنا</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div id="about" class="section animate__animated animate__fadeInUp">
+            <h2>أفضل شركات UPVC في مصر 2024 (شبابيك وأبواب UPVC)</h2>
+            <img src="../10/104.jpg" alt="صورة حول الفتح">
+            <p>
+                توفر شركة الفتح جميع أنواع شبابيك UPVC وأبواب UPVC بمختلف الأنواع كي تلائم متطلبات واحتياجات جميع عملائنا، مثل:
+            </p>
+            <ul>
+                <li>النوافذ أو شبابيك UPVC الجرارة</li>
+                <li>شبابيك UPVC المفصلية</li>
+                <li>نوافذ UPVC المحورية</li>
+                <li>شبابيك UPVC المفصلي قلاب</li>
+            </ul>
+            <p>
+                مما يسمح للعملاء بالاستفادة من النوافذ لأقصى درجة للحصول على أكبر قدر من المساحة والتهوية.
+            </p>
+            <p>
+                تتميز منتجات UPVC الخاصة بنا بقدرتها العالية على تحمل الصدمات، وعزلها الممتاز للحرارة والأصوات. فهي مصممة بعناية لتناسب كافة متطلبات السوق المصري وتلبي احتياجات جميع العملاء، سواء للاستخدام السكني أو التجاري. بالإضافة إلى ذلك، فإنها مقاومة للحريق والمياه والتآكل، مما يجعلها الخيار الأمثل للأجواء المناخية القاسية. بفضل جودة المواد المستخدمة والتصميم المبتكر، تضمن الفتح تقديم منتجات ذات عمر افتراضي طويل وتكاليف صيانة منخفضة.
+            </p>
+        </div>
+        <div id="products" class="section animate__animated animate__fadeInUp">
+            <h2>فوائد قطاعات UPVC للنوافذ والأبواب</h2>
+            <img src="../10/105.jpg" alt="فوائد UPVC">
+            <img src="../10/103.jpg" alt="فوائد UPVC">
+            <p>
+                يصنع الـ UPVC من مادة كلوريد البولي فينيل في شكل مسحوق أو حبيبات، ويخلط مع إضافات أخرى لتحقيق القوة الهيكلية المطلوبة واللون. تتشكل القطاعات عن طريق تسخين هذا الخليط وتحويله في حالة منصهرة.
+            </p>
+            <ul>
+                <li>قدرة عالية على تحمل الصدمات</li>
+                <li>عزل حراري ممتاز</li>
+                <li>عزل صوتي فعال</li>
+                <li>مقاومة للحريق والمياه والتآكل والصدأ</li>
+                <li>سهولة التنظيف ومقاومة للبكتيريا والفطريات</li>
+                <li>شكل جمالي في المنزل</li>
+            </ul>
+            <p>
+                إن قطاعات UPVC تتميز أيضًا بكونها صديقة للبيئة، حيث إنها قابلة لإعادة التدوير وتساهم في تقليل استهلاك الطاقة داخل المنازل والمباني. كما أن تصميمها الفريد يضمن عدم وجود فراغات، مما يمنع تسرب الهواء والأتربة ويعزز من كفاءة العزل الحراري والصوتي.
+            </p>
+        </div>
+        <div id="benefits" class="section animate__animated animate__fadeInUp">
+            <h2>فوائد استخدام شبابيك وأبواب UPVC في المباني</h2>
+            <ol>
+                <li><strong>مقاومة التأثيرات البيئية والطقس:</strong> UPVC مقاوم للأمطار والثلوج والعوامل الجوية، مما يجعله يدوم لفترات طويلة دون الحاجة إلى صيانة مكلفة.</li>
+                <li><strong>عزل حراري وصوتي فعال:</strong> UPVC يوفر عزلًا حراريًا وصوتيًا ممتازًا، مما يساهم في تحسين كفاءة استهلاك الطاقة وتقليل الضوضاء.</li>
+                <li><strong>متانة وقوة هيكلية:</strong> UPVC يتمتع بالمتانة ومقاومة التآكل والصدأ، مما يضمن الحفاظ على شكله ووظائفه لفترات طويلة.</li>
+                <li><strong>سهولة الصيانة والتنظيف:</strong> UPVC سهل التنظيف باستخدام الماء والصابون ولا يحتاج إلى صيانة مكلفة.</li>
+                <li><strong>تنوع التصميم والألوان:</strong> UPVC يأتي بتصاميم وألوان متنوعة، مما يتيح للأفراد اختيار الأنماط التي تناسب ذوقهم.</li>
+            </ol>
+            <p>
+                من خلال استخدام شبابيك وأبواب UPVC، يمكن تحقيق أعلى مستويات الأمان والراحة داخل المنزل. كما أن التصميمات المختلفة والمتنوعة تتيح الفرصة لاختيار ما يناسب الطراز المعماري للمنزل، سواء كان كلاسيكيًا أو عصريًا.
+            </p>
+        </div>
+        <div id="comparison" class="section animate__animated animate__fadeInUp">
+            <h2>هل شبابيك الألوميتال أفضل أم UPVC؟</h2>
+            <p>
+                اختيار الشبابيك المناسبة بين الألمنيوم و UPVC يعتمد على عدة عوامل تشمل الاحتياجات الشخصية، الميزانية، الظروف المناخية، والتفضيلات في التصميم. هنا بعض المقارنات بين الاثنين لمساعدتك في اتخاذ قرار مناسب:
+            </p>
+            <ul>
+                <li><strong>مقاومة التآكل:</strong> UPVC مقاوم للتآكل والعوامل البيئية، بينما الألومنيوم يتأثر بالتآكل خاصة في المناطق الرطبة.</li>
+                <li><strong>العزل الحراري والصوتي:</strong> UPVC يتفوق في العزل الحراري والصوتي مقارنةً بالألومنيوم.</li>
+                <li><strong>التكلفة والصيانة:</strong> UPVC يتطلب صيانة أقل على المدى الطويل، بينما الألومنيوم يحتاج إلى صيانة دورية وقد تكون تكلفته أقل في البداية.</li>
+                <li><strong>التصميم والمظهر:</strong> الألومنيوم يوفر مرونة أكبر في التصميم، بينما UPVC يقدم تصاميم جيدة بألوان محدودة.</li>
+            </ul>
+            <p>
+                باختصار، كلا الخيارين لهما فوائد واستخداماتهما الخاصة، ويجب اختيار النوع الأنسب بناءً على الاحتياجات والتفضيلات الفردية.
+            </p>
+        </div>
+        <div id="contact" class="contact-info animate__animated animate__fadeInUp">
+            <h2>اتصل بنا</h2>
+            <p>
+                لمزيد من المعلومات حول خدماتنا ومنتجاتنا، لا تتردد في التواصل معنا عبر الطرق التالية:
+            </p>
+            <p><strong>الهاتف:</strong> 01140505636 - 01288923256 </p>
+            <p><strong>البريد الإلكتروني:</strong> info@windoorsolutions.net</p>
+            <p><strong>العنوان:</strong> الاسكندرية/خورشيد/طريق المحمودية</p>
+        </div>
+    </div>
+    <a href="https://wa.link/kth31c" class="whatsapp-icon" target="_blank" title="تواصل عبر الواتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <footer class="animate__animated animate__fadeIn">
+        <p>جميع الحقوق محفوظة &copy; 2024 - الفتح</p>
+        <div class="social-icons">
+                      <a href="https://www.facebook.com/ELFATHUPV?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.link/kth31c"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/elfath_upvc"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
+    

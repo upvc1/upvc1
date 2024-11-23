@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> الفتح للنوافذ والأبواب UPVC</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        header {
+            background-color: #0086c5;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        header img.logo {
+            height: 60px;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            flex-grow: 1;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #2e2e2e;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 80px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            position: relative;
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #00bfa5;
+        }
+        
+        nav ul li:hover>ul {
+            display: block;
+        }
+        
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2e2e2e;
+            padding: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+        }
+        
+        nav ul ul li {
+            margin: 0;
+        }
+        
+        nav ul ul a {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            white-space: nowrap;
+        }
+        
+        nav ul ul a:hover {
+            background-color: #00bfa5;
+            color: #fff;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .about-us,
+        .services,
+        .contact-info,
+        .goals,
+        .branches,
+        .values-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s;
+        }
+        
+        .about-us:hover,
+        .services:hover,
+        .contact-info:hover,
+        .goals:hover,
+        .branches:hover,
+        .values-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .about-us h2,
+        .services h2,
+        .contact-info h2,
+        .goals h2,
+        .branches h2,
+        .values-section h2 {
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            font-size: 2.5rem;
+        }
+        
+        .values-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        .value-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .value-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .value-card i {
+            font-size: 3rem;
+            color: #ff9800;
+            margin-bottom: 15px;
+        }
+        
+        .value-card h3 {
+            color: #1a1a1a;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .value-card p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .team-images,
+        .branches-images {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        
+        .team-images img,
+        .branches-images img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .team-images img:hover,
+        .branches-images img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        footer {
+            background-color: #0086c5;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            animation: fadeIn 2s;
+        }
+        
+        footer .social-icons {
+            margin-top: 10px;
+        }
+        
+        footer .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        footer .social-icons a:hover {
+            color: #00bfa5;
+        }
+        
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            font-size: 2.5rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            /* يجعل الأيقونة دائرية */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            text-decoration: none;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        /* Media Queries to Make Page Responsive */
+        /* للأجهزة اللوحية والشاشات المتوسطة */
+        
+        @media (max-width: 1024px) {
+            header {
+                flex-direction: column;
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 2rem;
+                margin: 10px 0;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .values-container {
+                flex-direction: column;
+            }
+            .branches-images,
+            .team-images {
+                flex-direction: column;
+            }
+            .container {
+                width: 95%;
+            }
+            .whatsapp-icon {
+                bottom: 15px;
+                right: 15px;
+                width: 50px;
+                height: 50px;
+                font-size: 2rem;
+            }
+        }
+        /* للأجهزة الصغيرة والشاشات المحمولة */
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+            header img.logo {
+                height: 50px;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            nav a {
+                font-size: 1rem;
+            }
+            .container {
+                width: 100%;
+                padding: 15px;
+            }
+            .about-us,
+            .services,
+            .contact-info,
+            .goals,
+            .branches,
+            .values-section {
+                padding: 15px;
+            }
+            .values-container {
+                flex-direction: column;
+            }
+            .value-card {
+                min-width: 100%;
+                margin-bottom: 20px;
+            }
+            .team-images img,
+            .branches-images img {
+                max-width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+        /* للأجهزة المحمولة الصغيرة جداً (مثل الهواتف الذكية القديمة) */
+        
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            nav a {
+                font-size: 0.9rem;
+                margin: 5px;
+            }
+            .about-us h2,
+            .services h2,
+            .contact-info h2,
+            .goals h2,
+            .branches h2,
+            .values-section h2 {
+                font-size: 1.5rem;
+            }
+            .value-card h3 {
+                font-size: 1.3rem;
+            }
+            .value-card p {
+                font-size: 0.9rem;
+            }
+            footer .social-icons a {
+                font-size: 1.2rem;
+            }
+            footer {
+                padding: 15px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <header>
+            <img src=Logo/6.png alt="Logo" class="logo">
+            <!-- مكان للوجو -->
+            <h1 class="animate__animated animate__fadeInDown">الفتح للنوافذ والأبواب UPVC </h1>
+        </header>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li>
+                <a href="#">منتجاتنا <i class="fas fa-chevron-down"></i></a>
+                <ul>
+                    <li><a href="10.html">أبواب وشبابيك الألومنيوم</a></li>
+                    <li><a href="11.html">شبابيك وأبواب UPVC</a></li>
+                    <li><a href="12.html">واجهات زجاجية وقبب</a></li>
+                    <li><a href="13.html">شيش حصيرة شاتر</a></li>
+                    <li><a href="14.html">كابينة شاور وأبواب سيكوريت</a></li>
+                    <li><a href="15.html">هاندريل زجاجي ومعدني</a></li>
+                    <li><a href="16.html">مطابخ </a></li>
+                    <li><a href="17.html">تندات</a></li>
+                    <li><a href="18.html">أبواب وشبابيك هاندريل حديد</a></li>
+                </ul>
+            </li>
+            <li><a href="services.html">الخدمات</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <!-- هنا الزرار بيشتغل -->
+            <li><a href="our.html">عملاؤنا</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <div id="about-us" class="about-us animate__animated animate__fadeInUp">
+            <h2>من نحن</h2>
+            <p>
+                نحن في الفتح نقدم حلولاً مبتكرة وشاملة للنوافذ والأبواب المصنوعة من UPVC. نتميز بتقديم منتجات ذات جودة عالية تهدف إلى تحسين مستوى المعيشة وضمان أقصى درجات العزل الحراري والصوتي، مع المحافظة على المتانة والأمان.
+            </p>
+            <p>
+                منذ بدايتنا، كانت رؤيتنا هي تقديم أفضل الحلول بأعلى جودة، لنوفر لعملائنا الأمان والراحة. نحن نسعى جاهدين لتحقيق التميز في كل ما نقدمه من منتجات وخدمات، وذلك من خلال العمل مع فريق متخصص ومهني ذو خبرة عالية.
+            </p>
+            <p>
+                تعتبر شركة الفتح واحدة من الشركات الرائدة في السوق المصري، حيث نقدم مجموعة واسعة من التصاميم التي تناسب مختلف الأذواق والمتطلبات، ونضمن لعملائنا أفضل أداء لأبواب ونوافذ UPVC في بيئتهم الخاصة.
+            </p>
+            <div class="team-images">
+                <video autoplay loop muted width="600">
+                    <source src="1.mp4" type="video/mp4">
+                    <p>متصفحك لا يدعم عنصر الفيديو. يمكنك تحميل الفيديو من <a href="1.mp4">هنا</a>.</p>
+                </video>
+
+
+            </div>
+        </div>
+
+        <div id="values" class="values-section animate__animated animate__fadeInUp">
+            <h2>قيمنا ورؤيتنا ومهمتنا</h2>
+            <div class="values-container">
+                <div class="value-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>مهمتنا</h3>
+                    <p>
+                        يلتزم فريق الفتح بتحقيق أعلى درجات الرضا للعملاء من خلال تقديم منتجات ذات جودة عالية وخدمات تفوق التوقعات، وذلك مع الالتزام بالقيم المهنية.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>رؤيتنا</h3>
+                    <p>
+                        رؤيتنا هي أن نكون المزود الرائد لحلول UPVC في المنطقة، من خلال الابتكار وتقديم منتجات بأعلى مستويات الجودة والتي تساهم في تحسين حياة عملائنا.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>قيمنا</h3>
+                    <p>
+                        نؤمن بأهمية العمل بروح الفريق، المصداقية، والالتزام بالجودة. نسعى دائماً لتطوير حلول مبتكرة تحقق أقصى رضا لعملائنا.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="goals" class="goals animate__animated animate__fadeInUp">
+            <h2>الأهداف</h2>
+
+            <p>
+                أهدافنا تتضمن تقديم منتجات عالية الجودة بتكلفة معقولة، وضمان تجربة ممتازة لعملائنا، وتطوير فريق العمل ليكون الأفضل في مجاله.
+            </p>
+        </div>
+
+        <div id="branches" class="branches animate__animated animate__fadeInUp">
+            <h2>فروعنا</h2>
+            <p>
+            </p>
+            <ul>
+
+                <li><strong>فرع الإسكندرية:</strong> الاسكندرية/خورشيد/طريق المحمودية</li>
+
+            </ul>
+            <div class="branches-images">
+                <video autoplay loop muted width="600">
+                    <source src="2.mp4" type="video/mp4">
+                    <p>متصفحك لا يدعم عنصر الفيديو. يمكنك تحميل الفيديو من <a href="1.mp4">هنا</a>.</p>
+                </video>
+
+            </div>
+        </div>
+
+        <div id="contact" class="contact-info animate__animated animate__fadeInUp">
+            <h2>اتصل بنا</h2>
+            <p>
+                إذا كنت ترغب في معرفة المزيد عن خدماتنا ومنتجاتنا، لا تتردد في التواصل معنا عبر الطرق التالية:
+            </p>
+            <p><strong>الهاتف:</strong> 01140505636 - 01288923256 </p>
+            <p><strong>البريد الإلكتروني:</strong> info@windoorsolutions.net</p>
+            <p><strong>العنوان:</strong> الاسكندرية/خورشيد/طريق المحمودية</p>
+        </div>
+    </div>
+
+    <a href="https://wa.link/kth31c" class="whatsapp-icon" target="_blank" title="تواصل عبر الواتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer class="animate__animated animate__fadeIn">
+        <p>جميع الحقوق محفوظة &copy; 2024 - الفتح</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/ELFATHUPV?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.link/kth31c"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/elfath_upvc"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>

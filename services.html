@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> الفتح للنوافذ والأبواب UPVC</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+/* تنسيق عام للصفحة */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background-color: #0086c5;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* السماح بلف المحتوى */
+}
+
+header img.logo {
+    height: 60px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Nav */
+nav {
+            background-color: #2e2e2e;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 80px;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #00bfa5;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            position: relative;
+            margin: 0 20px;
+        }
+        nav ul li:hover > ul {
+            display: block;
+        }
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2e2e2e;
+            padding: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+        }
+        nav ul ul li {
+            margin: 0;
+        }
+        nav ul ul a {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            white-space: nowrap;
+        }
+        nav ul ul a:hover {
+            background-color: #00bfa5;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .section {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        .section h2 {
+            color: #1a1a1a;
+            font-size: 2.4rem;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1.2rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .section img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 40px;
+            margin: 20px 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: #444;
+        }   
+
+nav a:hover {
+    color: #00bfa5;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Services Grid */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+/* Service Card */
+.service-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 48%;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.service-card h2 {
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.service-card p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.service-card a {
+    background-color: #00bfa5;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.service-card a:hover {
+    background-color: #028d7b;
+}
+
+/* Footer */
+footer {
+    background-color: #0086c5;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #00bfa5;
+}
+
+/* WhatsApp icon */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* ريسبونسيف - للشاشات الصغيرة */
+/* Media Queries لجعل الصفحة متجاوبة */
+
+/* للأجهزة اللوحية والشاشات المتوسطة (max-width: 1024px) */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    header img.logo {
+        height: 50px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .service-card {
+        width: 45%; /* تقليل حجم البطاقة لتناسب الشبكة */
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .whatsapp-icon {
+        bottom: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* للأجهزة الصغيرة والشاشات المحمولة (max-width: 768px) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 100%; /* جعل كل بطاقة بعرض كامل */
+        padding: 15px;
+    }
+
+    .service-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .service-card p {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .whatsapp-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.8rem;
+    }
+}
+
+/* للأجهزة المحمولة الصغيرة جداً (max-width: 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .service-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+    }
+
+    .service-card a {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+
+    .whatsapp-icon {
+        font-size: 1.8rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    footer .social-icons a {
+        font-size: 1.2rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src=Logo/6.png alt="Logo" class="logo"> <!-- مكان للوجو -->
+        <h1 class="animate__animated animate__fadeInDown">الفتح للنوافذ والأبواب UPVC</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li>
+                <a href="#">منتجاتنا <i class="fas fa-chevron-down"></i></a>
+                <ul>
+                    <li><a href="10.html">أبواب وشبابيك الألومنيوم</a></li>
+                    <li><a href="11.html">شبابيك وأبواب UPVC</a></li>
+                    <li><a href="12.html">واجهات زجاجية وقبب</a></li>
+                    <li><a href="13.html">شيش حصيرة شاتر</a></li>
+                    <li><a href="14.html">كابينة شاور وأبواب سيكوريت</a></li>
+                    <li><a href="15.html">هاندريل زجاجي ومعدني</a></li>
+                    <li><a href="16.html">مطابخ </a></li>
+                    <li><a href="17.html">تندات</a></li>
+                    <li><a href="18.html">أبواب وشبابيك هاندريل حديد</a></li>
+                </ul>
+            </li>
+            <li><a href="services.html">الخدمات</a></li>
+            <li><a href="about.html">من نحن</a></li> <!-- هنا الزرار بيشتغل -->
+            <li><a href="our.html">عملاؤنا</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>خدماتنا</h2>
+        <div class="services-grid">
+            <!-- خدمة التوريد -->
+            <div class="service-card">
+                <img src=Services/1.png alt="خدمة التوريد">
+                <h2>خدمة التوريد</h2>
+                <p>نحن نقدم خدمات توريد المنتجات بأعلى معايير الجودة.</p>
+                <a href="https://wa.me/1234567890" target="_blank">المزيد</a>
+            </div>
+
+            <!-- خدمة ما بعد البيع -->
+            <div class="service-card">
+                <img src=Services/2.jpg alt="خدمة ما بعد البيع">
+                <h2>خدمة ما بعد البيع</h2>
+                <p>نحن نضمن رضا العملاء من خلال خدمات ما بعد البيع الممتازة.</p>
+                <a href="https://wa.me/1234567890" target="_blank">المزيد</a>
+            </div>
+        </div>
+
+        <div class="services-grid">
+            <!-- خدمة التصنيع -->
+            <div class="service-card">
+                <img src=Services/3.jpg alt="خدمة التصنيع">
+                <h2>خدمة التصنيع</h2>
+                <p>نقدم خدمات التصنيع المخصصة لتلبية احتياجاتك الخاصة.</p>
+                <a href="https://wa.me/1234567890" target="_blank">المزيد</a>
+            </div>
+
+            <!-- خدمة التركيب -->
+            <div class="service-card">
+                <img src=Services/4.jpg alt="خدمة التركيب">
+                <h2>خدمة التركيب</h2>
+                <p>نحن نضمن تركيب جميع المنتجات بدقة واحترافية عالية.</p>
+                <a href="https://wa.me/1234567890" target="_blank">المزيد</a>
+            </div>
+        </div>
+
+        <div class="services-grid">
+            <!-- خدمة المعاينة -->
+            <div class="service-card">
+                <img src="Services/5.jpg" alt="خدمة المعاينة">
+                <h2>خدمة المعاينة</h2>
+                <p>نقوم بتقديم خدمات المعاينة لضمان أفضل تجربة لعملائنا.</p>
+                <a href="https://wa.me/01140505636" target="_blank">المزيد</a>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/01140505636" class="whatsapp-icon" target="_blank" title="تواصل عبر الواتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2024 - الفتح</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/ELFATHUPV?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.link/kth31c"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/elfath_upvc"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

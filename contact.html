@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> الفتح للنوافذ والأبواب UPVC</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #0086c5;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header img.logo {
+            height: 60px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            flex-grow: 1;
+            text-align: center;
+        }
+        nav {
+            background-color: #2e2e2e;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 80px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            position: relative;
+            margin: 0 15px;
+        }
+        nav ul li:hover > ul {
+            display: block;
+        }
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2e2e2e;
+            padding: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+        }
+        nav ul ul li {
+            margin: 0;
+        }
+        nav ul ul a {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            white-space: nowrap;
+        }
+        nav ul ul a:hover {
+            background-color: #00bfa5;
+            color: #fff;
+        }
+        nav a:hover {
+            color: #00bfa5;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 40px;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 40px;
+        }
+        .contact-section {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s;
+        }
+        .contact-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .contact-section h2 {
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            padding: 15px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .contact-form button {
+            background-color: #00bfa5;
+            color: white;
+            padding: 15px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #028c7a;
+        }
+        .clients-section {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s;
+        }
+        .clients-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .clients-section h2 {
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        .client-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .client-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .client-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        .client-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .client-card h3 {
+            color: #1a1a1a;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .client-card p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+               footer {
+            background-color: #0086c5;
+            color: #fff;
+            text-align: center;
+            padding: 40px;
+            margin-top: 40px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            animation: fadeIn 2s;
+        }
+        footer .social-icons {
+            margin-top: 20px;
+        }
+        footer .social-icons a {
+            color: #fff;
+            margin: 0 15px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        footer .social-icons a:hover {
+            color: #00bfa5;
+        }
+        .contact-info {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s;
+        }
+        .contact-info:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .contact-info h3 {
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            font-size: 2.5rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            text-decoration: none;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+/* Media Queries to Make Page Responsive */
+
+/* للأجهزة اللوحية والشاشات المتوسطة (عرض أقل من 1024px) */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        margin: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .client-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .whatsapp-icon {
+        bottom: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+
+    .contact-form button {
+        width: 100%;
+    }
+}
+
+/* للأجهزة الصغيرة والشاشات المحمولة (عرض أقل من 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header img.logo {
+        height: 50px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .contact-section, .clients-section, .contact-info {
+        padding: 20px;
+    }
+
+    .client-card {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .client-card img {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .whatsapp-icon {
+        font-size: 1.8rem;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* للأجهزة المحمولة الصغيرة جداً (عرض أقل من 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        margin: 5px;
+    }
+
+    .contact-section h2, .clients-section h2, .contact-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .client-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .client-card p {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    footer .social-icons a {
+        font-size: 1.2rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src=Logo/6.png alt="Logo" class="logo"> <!-- مكان للوجو -->
+        <h1 class="animate__animated animate__fadeInDown">الفتح للنوافذ والأبواب UPVC</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li>
+                <a href="#">منتجاتنا <i class="fas fa-chevron-down"></i></a>
+                <ul>
+                    <li><a href="10.html">أبواب وشبابيك الألومنيوم</a></li>
+                    <li><a href="11.html">شبابيك وأبواب UPVC</a></li>
+                    <li><a href="12.html">واجهات زجاجية وقبب</a></li>
+                    <li><a href="13.html">شيش حصيرة شاتر</a></li>
+                    <li><a href="14.html">كابينة شاور وأبواب سيكوريت</a></li>
+                    <li><a href="15.html">هاندريل زجاجي ومعدني</a></li>
+                    <li><a href="16.html">مطابخ </a></li>
+                    <li><a href="17.html">تندات</a></li>
+                    <li><a href="18.html">أبواب وشبابيك هاندريل حديد</a></li>
+                </ul>
+            </li>
+            <li><a href="services.html">الخدمات</a></li>
+            <li><a href="about.html">من نحن</a></li> <!-- هنا الزرار بيشتغل -->
+            <li><a href="our.html">عملاؤنا</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+    </nav>
+</section>
+    <div class="container">
+        <div class="contact-section animate__animated animate__fadeInUp">
+            <h2>اتصل بنا</h2>
+            <p>إذا كنت ترغب في معرفة المزيد عن خدماتنا أو لديك أي استفسارات، يمكنك التواصل معنا من خلال النموذج التالي:</p>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="الاسم" required>
+                <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+                <textarea name="message" rows="5" placeholder="الرسالة" required></textarea>
+                <button type="submit">إرسال</button>
+            </form>
+        </div>
+    </div>
+        </section>
+        <section class="contact-info">
+            <h3>للتواصل معنا:</h3>
+            <p>إذا كنت ترغب في الحصول على مزيد من المعلومات أو الاستفسار، يمكنك الاتصال بنا عبر الواتساب:</p>
+            <p><strong>رقم الواتساب:</strong> <a href="https://wa.me/01140505636" target="_blank">01140505636</a></p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 الفتح. جميع الحقوق محفوظة.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/ELFATHUPV?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.link/kth31c"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/elfath_upvc"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <!-- أيقونة الواتساب -->
+    <a href="https://wa.me/20123456789" class="whatsapp-icon" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
